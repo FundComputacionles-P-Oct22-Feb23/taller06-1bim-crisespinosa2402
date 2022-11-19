@@ -1,0 +1,48 @@
+Generar una solución que permita ingresar jugadores de fútbol; por cada jugador se debe solicitar:
+Nombre el jugador
+Posición en el campo de juego
+Edad
+Estatura
+El ciclo de ingreso de información deberá terminar cuando el usuario lo decida. Se debe imprimir el siguiente reporte (usar una cadena de acumulación):
+
+Listado de Jugadores
+1. Alexander Dominguez -Arquero-, edad 32, estatura 1.95
+2. Xavier Arreaga -Defensa-, edad 24, estatura 1.85
+3. Moisés Caicedo -Mediocentro-, edad 19, estatura 1.88
+4. Ángel Mena -Delantero-, edad 32, estatura 1.75
+5. Michael Estrada -Delantero-, edad 27, estatura 1.93
+Promedio de edades:  26.8
+Promedio de estaturas: 1.87
+
+Miniespecificación:
+1. Inicio
+2. nombreJugador, x(100)[{A-Z},{BS},{a-z}]
+3. posicionJuego, x(100)[{A-Z},{BS},{a-z}]
+4. edadJugador, i[0-n]
+5. estaturaJugador, d[0-n]
+6. informacionJugadores, x(500)[{A-Z},{BS},{a-z}] <-- " "
+7. opcion, x(2)[a-z]
+8. bandera, l <-- true
+9. promedioEdades, d[0-n]
+10.promedioEstatura, d[0-n]
+11. Mientras bandera == true entonces
+12. <<"Ingrese el nombre del jugador por favor"
+13. >>nombreJugador
+14. <<"Ingrese la posición en el campo de juego del jugador por favor"
+15. >>posicionJuego
+16. <<"Ingrese la edad del jugador por favor"
+17. >>edadJugador
+18. <<"Ingrese la estatura del jugador por favor"
+19. >>estaturaJugador
+20. informacionJugadores <-- informacionJugadores + "Listado de jugadores" + "\n" + nombreJugador + "\t" + posicionJuego + "," + "\t" + "edad" + "\t" + "edadJugador" + "," + "\t" + "estatura" + "\t" + estaturaJugador + "\n"
+21. promedioEdades <-- edadJugador + edadJugador
+22. promedioEstatura <-- promedioEstatura + promedioEstatura
+21. <<"Si desea terminar el proceso, escriba la palabra si para salir"
+22. >>opcion
+23.  Si opcion == si 
+24.   bandera <-- false
+25.  Fin Si
+26. Fin Mientras
+27.<< informacionJugadores + "\n" + "Promedio de edades:" + "\t" + promedioEdades + "\n" + "Promedio de estaturas:" + "\t" + promedioEstatura  
+28.Fin
+

@@ -1,0 +1,36 @@
+Una empresa de comercialización de computadoras realiza el proceso de venta haciendo un descuento por tipo de cliente: 
+Si es cliente tipo 1 hay un descuento del 10% Si es cliente tipo 2 hay un descuento del 20% En caso que sea otro tipo de cliente, no hay descuento. 
+Generar un proceso que permita ingresar 7 ventas: por cada venta preguntar los siguiente datos:
+Nombre del cliente
+Costo de la computadora (solo se vende una computadora por transacción)
+Tipo de cliente Presentar el siguiente reporte: Cliente tipo 1, compra computadora con precio $100
+
+Miniespecificación:
+1. Inicio
+2. numero, i[0-n] <-- 1
+3. nombreCliente, x(500)[{A-Z},{BS},{a-z}]
+4. precioComputadora, d[0,n]
+5. tipoCliente, i[0-n] 
+6. primerDescuento, d[0-n] <-- 10
+7. segundoDescuento, d[0-n] <-- 20
+8. valorDescuento, d[0-n]
+9. Mientras tipoCliente <=7 entonces
+10. <<"Ingrese el nombre del cliente por favor"
+11. >> nombreCliente
+12. <<"Ingrese el costo de la computadora por favor"
+13. >> precioComputadora
+14. Si tipoCliente ==1 entonces
+15.  valorDescuento <-- precioComputadora * primerDescuento / 100
+16.  precioComputadora <-- precioComputadora - valorDescuento
+17. De lo contrario
+18.  Si tipoCliente ==2 entonces
+19.   valorDescuento <-- precioComputadora * segundoDescuento / 100
+20.   precioComputadora <-- precioComputadora - valorDescuento
+23.  Fin Si
+24. Fin Si
+25.numero <-- numero + 1
+26.Fin Mientras
+27.<<"Cliente tipo" + tipoCliente + "," + "compra computadora con precio" + "\t" + precioComputadora
+28.Fin
+
+

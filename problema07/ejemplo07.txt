@@ -1,0 +1,19 @@
+Generar e imprimir la siguiente serie:
+-1/1+1/2-1/3+1/4-1/5+1/6-1/7+1/8-1/9+1/10
+
+Miniespecificación:
+1. Inicio
+2. primerNumero, i[-n,n] <-- -1
+3. segundoNumero, i[0-n] <-- 1
+4. serie, x(100)[{A-Z},{BS},{a-z},{1-10}] <-- " "
+5. numero <-- 1
+6. Mientras numero <= 10 entonces
+7.  serie <-- serie + primerNumero + "/" + segundoNumero + "+" 
+8.  primerNumero <-- primerNumero * -1
+9.  segundoNumero <-- segundoNumero + 1
+10. numero <-- numero + 1
+11.Fin Mientras
+12.<< serie
+13.Fin
+
+
